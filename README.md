@@ -27,27 +27,29 @@ Using bulleted lists and images to support your answers, address the following q
 
 - What variable(s) are considered to be the features for your model?
 
-  Rest of the columns (excluding 'EIN','NAME', and 'IS_SUCCESSFUL') are considered to be the features for this model. The values have been converted using One Hot Encoding module for the model to comprehend 'object' types. 
+  After dropping'EIN','NAME', and 'IS_SUCCESSFUL' columns from the dataframe, the rest of the columns are considered to be the features for this model. The values have been converted using One Hot Encoding module for the model to comprehend 'object' types. 
 
 - What variable(s) are neither targets nor features, and should be removed from the input data?
   
-  The 'EIN' and 'NAME' columns were dropped from the dataframe since it only adds more noise to the model. 
+  The 'EIN' and 'NAME' columns were dropped from the dataframe for preprocessing. Another few columns that should've been removed are the 'AFFLIATION', 'USE_CASE', and 'ORGANIZATION' columns since it only adds more noise to the model. 
 
 
 ### Compiling, Training, and Evaluating the Model
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
   2 Layers for 100 epochs using ReLu and Sigmoid activation functions since it had the closest accuracy score to 75%. 
-    Layer 1 - 80 neurons
-    Layer 2 - 30 neurons
+    - Layer 1 - 80 neurons
+    - Layer 2 - 30 neurons
   
 
 - Were you able to achieve the target model performance?
 
-  For the 'AlphabetSoupCharity_Optimization.ipynb' file, I was unable to achieve the target model performance. However, for the 'AlphabetSoupCharity.ipynb'     had better accuracy results (0.70). 
+  No. 
+  
+  For the 'AlphabetSoupCharity_Optimization.ipynb' file, I was unable to achieve the target model performance. However, for the 'AlphabetSoupCharity.ipynb' had better accuracy results (0.70). 
 
 - What steps did you take to try and increase model performance?
   
-  To increase model performance, I tried to add layers, add more neurons, and try a different model (tanh)--which took longer than the first performance.
+  To increase model performance, I tried to add more layers, add more neurons, and try a different activation function (tanh)--which took longer than the first performance.
 
 ## Summary: 
 After 6 total attempts, the first one from the 'AlphabetSoupCharity.ipynb' file was closest to the accuracy score. In the second file, 5 attempts were made to optimize the model performance, however did not achieve the target score and remained in the (.50 - 0.55) range. To solve this classification problem, I recommend utilizing a random forest model since both output and feature selection of random forest models are easy to interpret, and they can easily handle outliers and nonlinear data. 
