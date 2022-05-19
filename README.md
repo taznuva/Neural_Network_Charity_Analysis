@@ -18,7 +18,6 @@ Within this dataset are a number of columns that capture metadata about each org
   - IS_SUCCESSFUL—Was the money used effectively
 
 ## Results:
-Using bulleted lists and images to support your answers, address the following questions.
 
 ### Data Preprocessing
 - What variable(s) are considered the target(s) for your model?
